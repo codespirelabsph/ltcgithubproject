@@ -1,95 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinky Caorte 1- Portfolio</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinky Caorte's Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5faff;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            max-width: 800px; /* or any value you deem fit */
-            margin: 0 auto;
-        }
+    header {
+      background-color: #82cfff;
+      color: #002b45;
+      padding: 1rem 0;
+      text-align: center;
+    }
 
-        header {
-            background-color: #f4f4f4;
-            padding: 10px 0;
-            width: 100%;
-            text-align: center;
-        }
+    nav ul {
+      list-style: none;
+      background: #a3d5ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
+    nav ul li {
+      margin: 0;
+    }
 
-        section {
-            margin: 20px 0;
-            text-align: center;
-        }
+    nav ul li a {
+      display: block;
+      padding: 1rem;
+      color: #002b45;
+      text-decoration: none;
+    }
 
-        img.profile-pic {
-            width: 200px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-    </style>
+    nav ul li a:hover {
+      background-color: #d0efff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 2rem;
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1abc9c;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .project {
+      background: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #82cfff;
+      color: #002b45;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li a {
+        padding: 0.75rem;
+      }
+
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        padding-top: 1rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Dinky Caorte</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="profile_picture.jpg" alt="Dinky Caorte's Profile Picture" class="profile-pic">
-            <p>
-                I'm a computer enthusiast just beginning my journey in designing farm management systems and related programs, driven by a strong curiosity and the determination to grow into a skilled web developer.
-            </p>
-        </section>
+  <header>
+    <h1>Dinky Caorte's Profile</h1>
+    <p>Writing the future, one project at a time.</p>
+  </header>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/codespirelabsph/ltcgithubproject">Project 1</a>: My first github repository.</li>
-                <li><a href="#">Project 2</a>: Short description of another project.</li>
-                <!-- Add more projects as list items -->
-            </ul>
-        </section>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                How to reach you: Email, LinkedIn, GitHub, etc.
-            </p>
-        </section>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-section">
+        <img src="profile_picture.jpg" alt="Profile Picture" />
+        <div class="about-text">
+          <p>
+            I am an aspiring full-stack developer with a passion for learning and building web-based solutions. I'm driven by curiosity, creativity, and a desire to grow my skills in software development.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <footer>
-            <p>© 2023 by Dinky Caorte</p>
-        </footer>
-    </div>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Sample Project from Learn Computer Today</h3>
+        <p>
+          This simple webpage marks the beginning of my journey into web development. It reflects my growing understanding of how to build and structure websites.
+        </p>
+        <p><strong>Technologies:</strong> Basic Web Concepts</p>
+        <a href="https://codespirelabsph.github.io/ltcgithubproject/" target="_blank">View Live Project</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to connect, here’s how you can reach me:</p>
+      <ul>
+        <li>Email: <a href="mailto:codespirelabsph@gmail.com">codespirelabsph@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/codespirelabsph" target="_blank">github.com/codespirelabsph</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Dinky Caorte. All rights reserved.</p>
+  </footer>
+
 </body>
-
 </html>
